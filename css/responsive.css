@@ -1,0 +1,149 @@
+@media (max-width: 1100px) {
+    .records th{
+        height: 30px;
+        padding-left: 8px;
+        font-size: 0.8rem;    
+    }
+
+    .records td{
+        height: 10px;
+        padding-left: 8px;
+    }
+
+    .relatorioTotal {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .dados  {
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .dados .auto  input{
+        padding: 0;
+        width: 120px;
+    }
+
+    .money input {
+        text-align: center;
+        margin: 12px;
+        padding: 12px 0;
+        width: 130px;
+    }
+}
+
+@media (max-width: 900px) {
+    .money input {
+        text-align: center;
+        margin: 12px;
+        padding: 12px 0;
+        width: 100px;
+    }
+
+    .records th{
+        height: 30px;
+        padding-left: 8px;
+        font-size: 0.8rem;    
+    }
+
+    .records td{
+        font-size: 0.8rem;
+        height: 10px;
+        padding-left: 8px;
+    }
+
+    .button{
+        border-style: none;
+        height: 28px;
+        padding: 4px 8px;
+        font-size: 0.8rem;
+    }
+
+    header{
+        height: 40px;
+        line-height: 40px;
+        margin-bottom: 8px;
+    }
+    
+    main{
+        margin: 2vh auto;
+        padding: 5px;
+        box-shadow: 2px 2px 10px var(--shadow-color);
+        gap: 20px;
+    }
+    
+    .money input {
+        margin: 4px;
+        padding: 6px 0;
+    }
+}
+/* border: 1px solid red; */
+@media (max-width: 400px) {   
+
+    .grid {
+        display: grid;
+    }
+    
+    .dados  {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .dados .auto{
+        background: #00d2ff; 
+        background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);
+        background: linear-gradient(to right, #3a7bd5, #00d2ff);
+        border-radius: 4px;
+        padding: 0;
+    }
+
+    .dados .auto  input{
+        padding: 0;
+        width: 80px;
+        font-size: 14px;
+    }
+
+    .relatorioTotal {
+        margin-top: 48px;
+    }
+
+    main .btn .mobile{
+        height: 30px;
+        text-align: center;
+    }
+
+    .records th{
+        padding: 0;
+        height: 10px;
+        font-size: 0.5rem;   
+        text-align: center; 
+    }
+
+    .records td{
+        padding: 0;
+        text-align: center; 
+        height: 10px;
+        font-size: 0.5rem;
+    }
+
+    .button{
+        font-size: 0.5rem;
+        padding: 0 4px;
+        height: 16px;
+    }
+
+    .records th:last-child,
+    .records td:last-child{
+        min-width: 0px;
+    }
+
+    .modal-footer .button {
+        height: 40px;
+        width: 100px;
+        font-size: 1rem;
+    }
+}

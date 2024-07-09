@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/records.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="main.js" defer></script>
+    <title>Fechamento Bystorm</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">FECHAMENTO BYSTORM</h1>
+    </header>
+    <div class="relatorioTotal">
+        <div class="dados grid">
+            <div class="relatorio auto">
+                <label for="valorTotalRecebido">Valor Total Recebido</label>
+                <input type="text" id="valorTotalRecebido" value="0" disabled>
+            </div>
+            <div class="relatorio auto">
+                <label for="lucroDia">Lucro do dia</label>
+                <input type="text" id="lucroDia" value="0" disabled>
+            </div>
+            <div class="relatorio auto">
+                <label for="venRakel">Rakel</label>
+                <input type="text" id="venRakel" value="0" disabled>
+            </div>
+            <div class="relatorio auto">
+                <label for="venJackson">Jackson</label>
+                <input type="text" id="venJackson" value="0" disabled>
+            </div>
+        </div>
+
+        <div class="dados grid">
+            <div class="relatorio money">
+                <label for="credito">Cartão de Crédito</label>
+                <input type="text" id="credito">
+            </div>
+            <div class="relatorio money">
+                <label for="debito">Cartão de Débito</label>
+                <input type="text" id="debito">
+            </div>
+            <div class="relatorio money">
+                <label for="pix">Pix</label>
+                <input type="text" id="pix">
+            </div>
+            <div class="relatorio money">
+                <label for="dinheiro">Dinheiro</label>
+                <input type="text" id="dinheiro">
+            </div>
+            <div class="relatorio money">
+                <label for="upgrade">Upgrade</label>
+                <input type="text" id="upgrade">
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="btn">
+            <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Novo</button>
+            <button type="button" class="button blue mobile" id="relatorioShow">Gerar Relatório</button>
+        </div>
+        <table id="tableClient" class="records">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Produto</th>
+                    <th>Marca</th>
+                    <th>Gigas</th>
+                    <th>Recebido</th>
+                    <th>Custo</th>
+                    <th>Lucro</th>
+                    <th>Vendedor</th>
+                    <th>Data</th>
+                    <th>Origem</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Cliente</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Cliente" required>
+                    <input type="text" id="produto" class="modal-field" placeholder="Produto Comprado" required>
+                    <input type="text" id="marca" class="modal-field" placeholder="Marca do Produto" required>
+                    
+                    <select name="armazenamento" id="armazenamento">
+                        <option value="selected">---Selecionar---</option>
+                        <option value="64">64GB</option>
+                        <option value="128">128GB</option>
+                        <option value="256">256GB</option>
+                        <option value="1T">1Tera</option>
+                        <option value="naoSeAplica">Não se aplica</option>
+                    </select>
+
+                    <input type="text" id="valorRecebido" class="modal-field" placeholder="Valor Recebido" required>
+                    <input type="text" id="custo" class="modal-field" placeholder="Custo" required>
+                    <input type="text" id="lucro" class="modal-field" placeholder="Lucro" required disabled>
+                    
+                    <select name="vendedor" id="vendedor">
+                        <option value="selected">---Selecionar---</option>
+                        <option value="rakel">Rakel</option>
+                        <option value="jackson">Jackson</option>
+                        <option value="newton">Newton</option>
+                        <option value="cristhian">Cristhian</option>
+                    </select>
+
+                    <input type="date" id="data" class="modal-field" placeholder="data" required>
+
+                    <select name="origem" id="origem">
+                        <option value="selected">---Selecionar---</option>
+                        <option value="anuncio">Anuncio</option>
+                        <option value="loja">Loja</option>
+                        <option value="indicação">Indicação</option>
+                        <option value="Cliente Antigo">Cliente Antigo</option>
+                    </select>
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id="cancelar" class="button blue">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
